@@ -6,11 +6,11 @@ class PushBot
     a = system 'git diff'
     system "git add ."
     system "git commit -m '#{commit_titel}'"
-    system "git push '#{branch}'"
+    system "git push 'origin #{branch}'"
   end
 end
 
 
 p = PushBot.new
 
-p.pushToGitHub('origin master', 'commit_titel_101')
+p.pushToGitHub('master', 'commit_titel_101')
