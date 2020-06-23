@@ -7,7 +7,7 @@ class PushBot
     system "git add ."
     system "git commit -m '#{commit_titel}'"
     branch = `git rev-parse --abbrev-ref HEAD`
-    system "git push '#{branch.strip}'"
+    system "git push 'origin #{branch.strip}'"
 
   end
 end
