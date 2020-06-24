@@ -7,6 +7,7 @@ class PushBot
     system "git add ."
     system "git commit -m '#{commit_titel}'"
     branch = `git rev-parse --abbrev-ref HEAD`
+    puts "nuttsie cookoo"
     system "git push '#{branch.strip.split().join}'"
 
   end
